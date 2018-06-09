@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>..JavaScript..</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.min.css">
+
+    <style>
+        .top {
+            margin-top: 60px;
+        }
+
+        .division {
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">JavaScript</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">JS
+                            <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#string">String</a>
+                            <a class="dropdown-item" href="#numeros">Numeros</a>
+                            <a class="dropdown-item" href="#booleans">Booleans</a>
+                            <a class="dropdown-item" href="#operadores">Operadores</a>
+                            <a class="dropdown-item" href="#variables">Variables</a>
+                            <a class="dropdown-item" href="#funciones">Funciones</a>
+                            <a class="dropdown-item" href="#operadores">Condicionales</a>
+                            <a class="dropdown-item" href="#arrays">Arrays</a>
+                            <a class="dropdown-item" href="#objetos">Objetos</a>
+                        </div>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Referencias
+                            <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="download">
+                            <a class="dropdown-item" href="https://www.w3schools.com/jsref/obj_window.asp" target="_blank">https://www.w3schools.com</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://developer.mozilla.org/es/docs/Web/API/Window" target="_blank">https://developer.mozilla.org/es</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://www.javascript.com/learn/numbers" target="_blank">https://www.javascript.com/learn</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" target="_blank">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" target="_blank">Herramientas</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container top">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group" style="font-size: 12px;">
+                        <a href="#" class="list-group-item list-group-item-action active">
+                            HTML DOM
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM Atrribute</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM Console</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM Document</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM Element</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM Events</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM Event Objects</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM History</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM HTMLCollection</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM Location</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM Navigator</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM Screen</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM Style</a>
+                        <a href="#" class="list-group-item list-group-item-action">DOM Window</a>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+
+
+
+                    <div id="dom-atrriibute" class="division">
+                        <h5>DOM Atrribute</h5>
+
+                        <div class="card text-white bg-secondary mb-3">
+                            <div class="card-header">Ejemplo</div>
+                            <div class="card-body">
+                                <h4 class="card-title">Secondary card title</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div id="dom-console" class="division">
+                        <h5>DOM Console</h5>
+                        <div class="card text-white bg-secondary mb-3">
+                            <div class="card-header">Ejemplo</div>
+                            <div class="card-body">
+                                <h4 class="card-title">Secondary card title</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="dom-window" class="division">
+                        <h5>DOM Window</h5>
+                        <p>
+                            El objeto window representa la ventana que contiene un documento DOM; la propiedad document apunta al DOM document cargado
+                            en esa ventana. El objeto window al que pertenece un documento puede ser obtenido usando la propiedad
+                            document.defaultView.
+                        </p>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr class="table-active">
+                                    <th scope="col">Propiedad</th>
+                                    <th scope="col">Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-dark">
+                                    <td> window.innerWidth</td>
+                                    <td> La propiedad innerWidth devuelve el ancho interno del área de contenido de una ventana.</td>
+                                </tr>
+                                <tr class="table-dark">
+                                    <td> window.innerHeight </td>
+                                    <td> La propiedad innerHeight devuelve la altura interna del área de contenido de una ventana.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="card text-white bg-secondary mb-3">
+                            <div class="card-header">Ejemplo</div>
+                            <div class="card-body">
+                                <p class="card-text">Colocar ejemplo.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <!--
+            <pre>
+                para obtener el alto con barras de herramientas / barras de desplazamiento.  window.outerHeight
+            </pre>
+            <pre>
+                para obtener el ancho con barras de herramientas / barras de desplazamiento. window.outerWidth
+            </pre>
+            -->
+
+
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        setInterval(function () {
+
+        }, 1000)
+    </script>
+
+
+</body>
+
+</html>
