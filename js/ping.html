@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+       function pingServidor(){
+            var pingserver = new Image();
+            pingserver.src = "http://deployweb.net/imagenes/logo.png";           
+            console.log("pingserver.src : " +  pingserver.src)
+            console.log("pingserver.height : " +  pingserver.height)
+            if (pingserver.height>0) {
+            alert("Online");
+            } else {
+            alert("Offline");
+            }
+        }     
+
+        pingServidor();
+    </script>
+</body>
+</html>

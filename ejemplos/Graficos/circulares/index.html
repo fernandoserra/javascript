@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grafico Circle</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.circliful.css">
+</head>
+<body>
+    
+    <section class="container">
+
+        <h3>Circliful</h3>
+    
+        <div class="row">
+            <div class="col-lg-2">
+                 <div id="test-circle" data-percent="58"></div>
+                <!-- <div id="test-circle" data-animation="1" data-animationStep="5" data-percent="58"></div> -->
+            </div>
+            <div class="col-lg-2">
+                <div id="test-circle2"></div>
+            </div>
+            <div class="col-lg-2">
+                <div id="test-circle3"></div>
+            </div>
+            <div class="col-lg-2">
+                <div id="test-circle4"></div>
+            </div>
+            <div class="col-lg-2">
+                <div id="test-circle5"></div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.circliful.js"></script>
+    <script>
+        
+        $( document ).ready(function() { // 6,32 5,38 2,34
+            $("#test-circle").circliful({
+                animation: 1,
+                animationStep: 5,
+                foregroundBorderWidth: 15,
+                backgroundBorderWidth: 15,
+                percent: 95,
+                textSize: 28,
+                textStyle: 'font-size: 12px;',
+                textColor: '#666',
+                multiPercentage: 1,
+                percentages: [10, 20, 30]
+            });
+            $("#test-circle2").circliful({
+                animation: 0,
+                animationStep: 6,
+                foregroundBorderWidth: 5,
+                backgroundColor: "none",
+                fillColor: '#eee',
+                percent: 50,
+                iconColor: '#3498DB',
+                icon: 'f206',
+                iconSize: '40',
+                iconPosition: 'middle'
+            });
+            $("#test-circle3").circliful({
+                animation: 1,
+                animationStep: 6,
+                foregroundBorderWidth: 5,
+                backgroundBorderWidth: 1,
+                percent: 88,
+                iconColor: '#3498DB',
+                icon: 'f004',
+                iconSize: '40',
+                iconPosition: 'middle'
+            });
+            $("#test-circle4").circliful({
+                animation: 1,
+                animationStep: 1,
+                start: 2,
+                showPercent: 1,
+                backgroundColor: '#000',
+                foregroundColor: '#A8C64A',
+                fontColor: '#000',
+                multiPercentage: 1,
+                text: 'No Kids',
+                foregroundBorderWidth: 15,
+                backgroundBorderWidth: 15,
+            });
+            $("#test-circle5").circliful({
+            animationStep: 5,
+            foregroundBorderWidth: 5,
+            backgroundBorderWidth: 15,
+            percent: 80,
+            halfCircle: 1,
+            });
+        });
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comprobar si existe un archivo en el servidor con JavaScript</title>
+</head>
+<body>
+    <h2>Comprobar si existe un archivo en el servidor con JavaScript</h2>
+    <script>
+        function existeUrl(url) {
+            var http = new XMLHttpRequest();
+            http.open('HEAD', url, false);
+            http.send();
+            return http.status!=404;
+        }
+        //Fuente
+        //http://www.mclarenx.com/2016/02/16/comprobar-si-existe-un-archivo-en-el-servidor-con-javascript/
+    </script>
+</body>
+</html>

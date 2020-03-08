@@ -1,0 +1,34 @@
+e
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sound</title>
+    <script>
+        var disparo = new Audio();
+        disparo.src = "sounds/disparo.mp3"
+        function loadDisparo() {
+            disparo.play();
+        }
+        var disparo2 = new Audio();
+        disparo2.src = "sounds/disparo_1.mp3"
+        function loadDisparos() {
+            disparo2.play();
+        }
+    </script>
+</head>
+
+<body>
+    <a href="#" onclick="loadDisparo()">Sonido1</a>
+    <a href="#" onclick="loadDisparo()">Sonido1</a>
+    <a href="#" onclick="loadDisparo()">Sonido1</a>
+    <hr>
+    <a href="#" onclick="loadDisparos()">Sonido1</a>
+    <a href="#" onclick="loadDisparos()">Sonido1</a>
+    <a href="#" onclick="loadDisparos()">Sonido1</a>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moment JS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+</head>
+
+<body>
+    <script>
+        function workingDays(dateFrom, dateTo) {
+            var from = moment(dateFrom, 'DD/MM/YYY'),
+                to = moment(dateTo, 'DD/MM/YYY'),
+                days = 0;
+
+            while (!from.isAfter(to)) {
+                // Si no es sabado ni domingo
+                if (from.isoWeekday() !== 6 && from.isoWeekday() !== 7) {
+                    days++;
+                }
+                from.add(1, 'days');
+            }
+            return days;
+        }
+
+
+        var days = workingDays('18/07/2018', '13/08/2018');
+        console.log(days);    
+    </script>
+</body>
+
+</html>

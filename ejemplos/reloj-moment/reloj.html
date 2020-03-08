@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo Reloj</title>
+    <style>
+        body{
+            background-color: #2D3941;
+        }
+        .reloj{
+            margin-top: 10%;
+            color: #EEECF3;
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="reloj" class="reloj">Cargando ...</div>
+
+    <div id="reloj2" class="reloj">Cargando ...</div>
+
+    <script src="../vendor/jquery-v2.0.3/jquery.min.js"></script>
+    <script src="../vendor/moment/moment.min.js"></script>
+    <script>
+
+        function actualizarTiempo() {
+            $('#reloj').html(moment().format('D/MM/YYYY H:mm:ss'));
+            $('#reloj2').html(moment().format('D/MM/YYYY h:mm:ss'));
+        }
+        setInterval(actualizarTiempo, 1000);
+    </script>
+</body>
+
+</html>

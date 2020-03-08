@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>validación</title>
+</head>
+
+<body>
+
+    <form id="contacto" action="validaconinput.html">
+        Nombre: <input type="text" id="nombre"/>
+        <br/>
+        Apellido: <input type="text" id="apellido"/>
+        <br/>
+        teléfono:  <input type="text" id="telefono" onkeyup="limitarInput(this)" onkeypress="return limitNumber(event);"/>
+        <br/>
+        Correo:  <input type="text" id="correo"/>
+        <br/>
+        <input type="button" value="Guardar" onclick="return getFormData();" />
+    </form>
+
+    <script src="../vendor/jquery-v2.0.3/jquery.min.js"></script>
+    <script>
+        $(function(){
+            console.log("Iniciando");
+            let xcv; 
+            validEmail("fernando@gmail.com");
+            
+            if (Fn.validaRut("25899981-9" )){
+               console.log("El rut ingresado es válido ");
+            } else {
+                console.log("El Rut no es válido :'( ");                
+            }    
+
+        });
+
+        function getFormData(){
+            var config = {};
+            $('input').each(function () {                        
+                console.log("id: " + this.id + " value: " + this.value  );
+                console.log("resultado de la funcion: " + emptyInput(this.id));
+                let resp= emptyInput(this.id);
+                
+                if(resp==true){
+                    alert("detenerrr")
+                    return false;
+                }else{
+
+                config[this.name] = this.value;
+                }
+                
+                return true
+            });
+            //console.log(config);
+        }
+
+        /*
+            Funcion para verificar que los campor esten vacios 
+        */
+        function  emptyInput(valor){
+            let respEmpty=false;
+            console.log("emptyInput: " + valor );            
+            console.log("" );
+            if(valor.trim()==""){
+                respEmpty=true;     
+            }
+            return respEmpty;
+        } 
+
+        function validEmail(email){
+            //document.getElementById('email').addEventListener('input', function() {
+              //  campo = event.target;
+                //valido = document.getElementById('emailOK');                    
+                emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+                //Se muestra un texto a modo de ejemplo, luego va a ser un icono
+                if (emailRegex.test(email)) {
+                    //valido.innerText = "válido";
+                    console.log("Correo Valido")
+                } else {
+                    console.log("Correo Incorrectooo")
+                    //valido.innerText = "incorrecto";
+                }
+           // });
+        }
+
+        var Fn = {
+            // Valida el rut con su cadena completa "XXXXXXXX-X"
+            validaRut : function (rutCompleto) {
+                rutCompleto = rutCompleto.replace("‐","-");
+                if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test( rutCompleto ))
+                    return false;
+                var tmp 	= rutCompleto.split('-');
+                var digv	= tmp[1]; 
+                var rut 	= tmp[0];
+                if ( digv == 'K' ) digv = 'k' ;
+                
+                return (Fn.dv(rut) == digv );
+            },
+            dv : function(T){
+                var M=0,S=1;
+                for(;T;T=Math.floor(T/10))
+                    S=(S+T%10*(9-M++%6))%11;
+                return S?S-1:'k';
+            }
+        }
+        
+        /*
+            Limite de caracteres en el imput
+        */
+        function limitarInput(obj) {
+            obj.value = obj.value.substring(0,15);
+        }
+
+        /*
+            Solo permite numeros
+        */    
+        function limitNumber(evt){
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+                if (charCode > 31 && (charCode < 48 || charCode > 57))
+                    return false;
+                return true;
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

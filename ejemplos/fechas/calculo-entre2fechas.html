@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculo entre 2 fechas</title>
+</head>
+<body>
+    
+
+    <script>
+        function cuentaFindes(){
+    var inicio = new Date("2017-02-24"); //Fecha inicial
+    var fin = new Date("2017-03-10"); //Fecha final
+    var timeDiff = Math.abs(fin.getTime() - inicio.getTime());  //Math.abs (metodo que devuelve el valor absoluto de un numero)
+    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); //Días entre las dos fechas
+    var cuentaFinde = 0; //Número de Sábados y Domingos
+    var array = new Array(diffDays);
+
+    for (var i=0; i < diffDays; i++) 
+    {
+        //0 => Domingo - 6 => Sábado
+        if (inicio.getDay() == 0 || inicio.getDay() == 6) {
+            cuentaFinde++;
+        }
+        inicio.setDate(inicio.getDate() + 1);
+    }
+
+   return cuentaFinde;
+}
+    </script>
+</body>
+</html>
